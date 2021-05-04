@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapeSelectorView">
+        <attr name="shapeColor" format="color" />
+        <attr name="displayShapeName" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FaceTracker">
+        <attr name="circleColor" format="color" />
+        <attr name="circleLabel" format="string" />
+        <attr name="labelColor" format="color" />
+    </declare-styleable>
+</resources>
