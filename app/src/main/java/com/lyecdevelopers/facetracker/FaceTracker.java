@@ -5,7 +5,9 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -15,14 +17,16 @@ public class FaceTracker extends View {
     private int circleCol, labelCol;
     private String circleText;
     private Paint circlePaint;
-    private Paint rectPaint;
     private Paint bluePaint;
     private Paint greenPaint;
     private Paint redPaint;
-
+    private Paint eraser;
+    private Paint textPaint;
+    private Paint semiCirclePaint;
+    private RectF rectangle;
+    private Float margin;
 
     private Paint paint;
-    private Path path;
 
 
     public FaceTracker(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -37,6 +41,13 @@ public class FaceTracker extends View {
 
     // Setup paint with color and stroke styles
     private void setupPaint() {
+
+        // eraser
+        eraser = new Paint();
+        eraser.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        eraser.setAntiAlias(true);
+
+
         //paint object circlePaint
         circlePaint = new Paint();
         circlePaint.setStyle(Paint.Style.STROKE);
@@ -44,27 +55,11 @@ public class FaceTracker extends View {
         circlePaint.setStrokeWidth(10);
         circlePaint.setColor(circleCol);
 
-        // paint object rectPaint
-        rectPaint = new Paint();
-        rectPaint.setStyle(Paint.Style.FILL);
-        rectPaint.setAntiAlias(true);
-        rectPaint.setStrokeWidth(10);
-        rectPaint.setColor(Color.RED);
 
-
-        // paint object pathPaint
-        path = new Path();
-        paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setDither(true);
-        rectPaint.setStrokeWidth(10);
-        paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.RED);
-
-        // paint object pathPaint
+        // paint object bluePaint
         bluePaint = new Paint();
         bluePaint.setColor(Color.rgb(0, 0, 255));
-        circlePaint.setAntiAlias(true);
+        bluePaint.setAntiAlias(true);
         bluePaint.setStrokeWidth(10);
         bluePaint.setStyle(Paint.Style.STROKE);
         bluePaint.setColor(circleCol);
@@ -87,6 +82,22 @@ public class FaceTracker extends View {
         redPaint.setStrokeWidth(10);
         redPaint.setColor(circleCol);
 
+        // paint for text
+        textPaint = new Paint();
+        textPaint.setAntiAlias(true);
+        textPaint.setColor(circleCol);
+        textPaint.setTextSize(50);
+
+        // semi circle paint
+        semiCirclePaint = new Paint();
+        semiCirclePaint.setAntiAlias(true);
+        semiCirclePaint.setColor(Color.RED);
+        semiCirclePaint.setStyle(Paint.Style.STROKE);
+        semiCirclePaint.setStrokeWidth(10);
+
+
+        margin = 10f;
+
 
     }
 
@@ -108,13 +119,16 @@ public class FaceTracker extends View {
         canvas.drawCircle(viewWidthHalf, viewHeightHalf, 350, circlePaint);
 
         // body circle
-        canvas.drawCircle(getWidth() * .5f, getHeight() * .93f, 500, bluePaint);
+        canvas.drawCircle(getWidth() * .5f, getHeight() * .96f, 550, bluePaint);
 
         // left ear
-        canvas.drawCircle(getWidth() * .18f, getHeight() * .5f, 100, greenPaint);
+        //canvas.drawCircle(getWidth() * .18f, getHeight() * .5f, 100, greenPaint);
 
         // right ear
-        canvas.drawCircle(getWidth() * .82f, getHeight() * .5f, 100, redPaint);
+        //canvas.drawCircle(getWidth() * .82f, getHeight() * .5f, 100, redPaint);
+
+        // text
+        canvas.drawText(circleText, getWidth() * .45f, getHeight() * .4f, textPaint);
 
 
     }

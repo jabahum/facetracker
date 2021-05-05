@@ -27,11 +27,6 @@
         app:displayShapeName="true"
         app:shapeColor="@color/teal_700" />
 
-    <Button
-        android:id="@+id/btnSelect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
 
     <com.lyecdevelopers.facetracker.FaceTracker
         android:visibility="visible"
@@ -42,7 +37,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         app:circleColor="@color/black"
-        app:circleLabel="test"
+        app:circleLabel="36.0"
         app:labelColor="@color/white" />
 
     <!--<com.lyecdevelopers.facetracker.CustomView
