@@ -7,15 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-    private Button btnSelect;
-    private ShapeSelectorView shapeSelector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +19,7 @@ public class MainActivity extends AppCompatActivity {
         //transparentToolbar();
         setContentView(R.layout.activity_main);
 
-        shapeSelector = findViewById(R.id.shapeSelector);
-        btnSelect = findViewById(R.id.btnSelect);
-        btnSelect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "You selected: " +
-                        shapeSelector.getSelectedShape(), Toast.LENGTH_LONG).show();
-            }
-        });
+
     }
 
     private void transparentToolbar() {
