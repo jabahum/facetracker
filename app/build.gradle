@@ -48,7 +48,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.lyecdevelopers'
                 artifactId = 'FaceTracker'
-                version = '1.0'
+                version = '1.1'
 
             }
         }
