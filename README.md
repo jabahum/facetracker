@@ -8,3 +8,4 @@
 > 
 >
 > - [PayPal](https://paypal.me/iamsanskartiwari)
+> - [Buy me a Coffee](https://www.buymeacoffee.com/jabahum)
