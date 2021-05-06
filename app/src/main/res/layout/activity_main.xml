@@ -6,28 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.lyecdevelopers.facetracker.SimpleDrawingView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="gone" />
-
-    <com.lyecdevelopers.facetracker.ShapeSelectorView
-        android:id="@+id/shapeSelector"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="gone"
-        app:displayShapeName="true"
-        app:shapeColor="@color/teal_700" />
-
-
     <com.lyecdevelopers.facetracker.FaceTracker
         android:visibility="visible"
         android:layout_width="wrap_content"
@@ -39,23 +17,5 @@
         app:circleColor="@color/black"
         app:circleLabel="36.0"
         app:labelColor="@color/white" />
-
-    <!--<com.lyecdevelopers.facetracker.CustomView
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true" />-->
-
-    <!--  <com.lyecdevelopers.facetracker.MyView
-          android:layout_alignParentStart="true"
-          android:layout_alignParentTop="true"
-          android:layout_alignParentEnd="true"
-          android:layout_alignParentBottom="true"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"/>-->
-
 
 </RelativeLayout>
