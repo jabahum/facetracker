@@ -8,25 +8,30 @@
 
 ## Usage
  How to
- To get a Git project into your build:
- Step 1. Add the JitPack repository to your build file
- Add it in your root build.gradle at the end of repositories:
-'''gradle
+ > To get a Git project into your build:
+ > Step 1. Add the JitPack repository to your build file
+ > Add it in your root build.gradle at the end of repositories:
+
+'''bash
 allprojects {
 		repositories {
-			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
 '''
  Step 2. Add the dependency
 
-'''gradle
+'''bash
 dependencies {
-	        implementation 'com.github.jabahum-coder:facetracker:v1.3'
+	        implementation 'com.github.jabahum-coder:facetracker:v1.4'
 	}
 '''
 
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ### Created & Maintained By
 
