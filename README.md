@@ -21,7 +21,7 @@ allprojects {
 
 '''
 dependencies {
-	        implementation 'com.github.jabahum-coder:facetracker:Tag'
+	        implementation 'com.github.jabahum-coder:facetracker:v1.3'
 	}
 '''
 

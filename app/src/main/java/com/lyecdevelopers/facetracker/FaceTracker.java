@@ -171,6 +171,14 @@ public class FaceTracker extends View {
         requestLayout();
     }
 
+    public void setLabelText(String newText) {
+        //update the instance variable
+        circleText = newText;
+        //redraw the view
+        invalidate();
+        requestLayout();
+    }
+
     public String getLabelText() {
         return circleText;
     }
