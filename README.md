@@ -39,5 +39,5 @@ Please make sure to update tests as appropriate.
 
 > 
 >
-> - [PayPal](https://paypal.me/iamsanskartiwari)
+> - [PayPal](https://paypal.me/jeremyjabar)
 > - [Buy me a Beer](https://www.buymeacoffee.com/jabahum)
