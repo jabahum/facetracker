@@ -6,7 +6,7 @@
 
 ### Created & Maintained By
 
-[Jabar Jeremy](@jabahum-coder)(https://github.com/jabahum-coder)
+[Jabar Jeremy](https://github.com/jabahum-coder)
 
 > 
 >
