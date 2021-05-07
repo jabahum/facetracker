@@ -116,10 +116,10 @@ public class FaceTracker extends View {
             radius = viewWidthHalf - 10;
 
         // draw circle
-        canvas.drawCircle(viewWidthHalf, viewHeightHalf, 350, circlePaint);
+        canvas.drawCircle(viewWidthHalf, viewHeightHalf, radius - 155, circlePaint);
 
         // body circle
-        canvas.drawCircle(getWidth() * .5f, getHeight() * .96f, 550, bluePaint);
+        canvas.drawCircle(getWidth() * .5f, getHeight() * .96f, radius - 10, bluePaint);
 
         // left ear
         //canvas.drawCircle(getWidth() * .18f, getHeight() * .5f, 100, greenPaint);
