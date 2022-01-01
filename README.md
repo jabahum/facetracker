@@ -25,7 +25,7 @@ allprojects {
 
 ```gradle
 dependencies {
-	        implementation 'com.github.jabahum-coder:facetracker:v1.4'
+	        implementation 'com.github.jabahum:facetracker:v1.4'
 	}
 ```
 
@@ -35,7 +35,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### Created & Maintained By
 
-[Jabar Jeremy](https://github.com/jabahum-coder)
+[Jabar Jeremy](https://github.com/jabahum)
 
 > 
 >
